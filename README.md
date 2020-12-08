@@ -8,7 +8,7 @@ This phase is about setting up my dev environement and getting things up and run
 **Phase 2:**
 
 ### How to use the app:
-Clone the repo and do an `npm i`. This will install all needed dependencies. You will need to also install the following:
+Clone the repo and do an `npm i`. This will install all needed dependencies. The following are optional:
 
 - Install XCode (Mac Users)
 - Install Android Studio (All Users)
