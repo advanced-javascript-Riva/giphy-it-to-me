@@ -1,9 +1,9 @@
-# giphy-it-to-me : A React Native App
+# giphy-it-to-me : A React Native App (IN PROGRESS)
 
 ### Author: Riva Davidowski
 
 **Phase 1:** 
-This phase is about setting up my dev environement and getting things up and running. Users can scan my QR and see the app on any device.
+This phase is about setting up my dev environment and getting things up and running. Users can scan my QR and see the app on any device.
 
 **Phase 2:**
 
