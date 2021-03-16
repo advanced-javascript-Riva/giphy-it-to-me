@@ -1,26 +1,22 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "giphy-it-to-me",
+  "version": "1.0.0",
+  "description": "simple app to deliver GIFS",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/advanced-javascript-Riva/giphy-it-to-me.git"
+  },
+  "author": "riva davidowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/advanced-javascript-Riva/giphy-it-to-me/issues"
+  },
+  "homepage": "https://github.com/advanced-javascript-Riva/giphy-it-to-me#readme",
   "dependencies": {
-    "expo": "~39.0.2",
-    "expo-google-app-auth": "^8.1.4",
-    "expo-status-bar": "~1.0.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
-    "react-native-gesture-handler": "~1.7.0",
-    "react-native-web": "~0.13.12",
-    "react-navigation": "^4.4.3",
-    "undefined": "react-native-community/google-signin"
-  },
-  "devDependencies": {
-    "@babel/core": "~7.9.0"
-  },
-  "private": true
+    "express": "^4.17.1"
+  }
 }

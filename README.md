@@ -1,22 +1,19 @@
-# giphy-it-to-me : A React Native App (IN PROGRESS)
+# Giphy-it-to-me : A simple app that delivers GIFS based off mood or search term. 
+
+The purpose of this app is to revisit vanilla JS using the GIPHY SDK, hitting an API endpoint, and setting up back-end using Express.
 
 ### Author: Riva Davidowski
 
-**Phase 1:** 
-This phase is about setting up my dev environment and getting things up and running. Users can scan my QR and see the app on any device.
+### Tools Used: 
 
-**Phase 2:**
+- Giphy Developers API
+- Express.js
+- Node.js
+- HTML, CSS, JS
 
 ### How to use the app:
-Clone the repo and do an `npm i`. This will install all needed dependencies. The following are optional:
 
-- Install XCode (Mac Users)
-- Install Android Studio (All Users)
-- Install 1 device emulator
-- Install expo-cli: `npm install -g expo-cli`
-- Create google play and apple developer accounts
-  
-** Run `npm start`  or `expo start` in the project directory**
+- Clone the repo and do an `npm i`. This will install all needed dependencies. 
 
 ## UML:
 
