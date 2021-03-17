@@ -1,6 +1,12 @@
-# Giphy-it-to-me : A simple app that delivers GIFS based off mood or search term. 
+# Giphy-it-to-me 
 
-The purpose of this app is to revisit vanilla JS using the GIPHY SDK, hitting an API endpoint, and setting up back-end using Express.
+### A simple web app that delivers GIFs based off mood or search term. 
+
+**The purpose of this app is to revisit vanilla JS, use the GIPHY Developer SDK, hit an API endpoint, and set up a back-end using Express.**
+
+**Users can:
+  - Search for GIFs
+  - 
 
 ### Author: Riva Davidowski
 
