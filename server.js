@@ -12,6 +12,7 @@ app.use(router);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Routes
 router.use('/', home);
 
 // Server listening...
