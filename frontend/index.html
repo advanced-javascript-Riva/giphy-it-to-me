@@ -19,16 +19,20 @@
     <div>GIPHY IT TO ME</div>
   </header>
   <div class="page-container">
-    <div class="searchbar-container">
-      <div class="search-icon">
-        <i class="bi bi-search"></i>
+    <div class="search-container">
+      <div class="searchbar-container">
+        <div class="search-icon">
+          <i class="bi bi-search"></i>
+        </div>
+        <input type="text" 
+              class="search-bar" 
+              placeholder="Search..."
+        />
       </div>
-      <input type="text" 
-            class="search-bar" 
-            placeholder="Search..."
-      />
+      <button class="search-button" onclick="getGifs()">SEARCH</button>
     </div>
-    <button class="search-button" onclick="getGifs()">SEARCH</button>
+    <div id="gif-container">
+    </div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="../index.js"></script>
