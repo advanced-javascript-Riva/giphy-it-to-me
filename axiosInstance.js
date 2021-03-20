@@ -1,9 +1,8 @@
 const axios = require('axios');
 
 const instance = axios.create({
-  baseURL: '',
+  baseURL: 'https://api.giphy.com/v1/gifs',
   timeout: 1000,
-  headers: {'X-Custom-Header': 'foobar'}
 });
 
 module.exports = instance;

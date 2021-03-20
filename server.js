@@ -4,7 +4,7 @@ const app = express();
 const router = express.Router();
 const port = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
-const home = require('./routes');
+const home = require('./routes/routes');
 app.use(express.static('public'));
 app.use(router);
 
