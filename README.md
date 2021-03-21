@@ -6,16 +6,18 @@
 
 ### Author: Riva Davidowski
 
-**The purpose of this app is to venture away from React-land. It is to revisit vanilla JS and get back in touch with the DOM. I love GIFs and decided to use the GIPHY Developer SDK, hit an API endpoint, and set up a back-end using Express.**
+**The purpose of this app is to venture away from React-land and revisit vanilla JS. I want to get back in touch with the HTML DOM (not the Virtual DOM) for a nice refresher and build an app that builds on features throughout each phase.**
 
-**The first version of this will be as mentioned above. For the second version, I will do a refactor of the app using React. Finally, for the last version, I shall give React Native a whirl and refactor this app to be a mobile application.**
+**The first phase of this will be as mentioned above. For the second, I will do a refactor of the app using React. Finally, for the last phase, I shall revisit React Native and refactor this app to be a mobile application.**
+
+**1st Phase: I love GIFs and decided to use the GIPHY Developer SDK, hit an API endpoint, and set up a back-end using Express.**
 
 **Users can:**
   - Search for GIFs by entering a search term
   - Filter GIFs based off mood
 
 
-### Tools Used: 
+### Tools Used Phase 1:
 
 - Giphy Developers API
 - Express.js
