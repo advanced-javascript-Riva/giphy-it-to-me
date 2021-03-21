@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 // Route requesting data from API
 router.get("/gifs", async (req, res, next) => {
   try {
-    const result = await instance.get(`/search?api_key=${API_KEY}&q=cats&limit=25&offset=0&rating=g&lang=en`);
+    const result = await instance.get(`/search?api_key=${API_KEY}&q=cats&limit=28&offset=0&rating=g&lang=en`);
     res.json(result.data);
   }
   catch (err) {

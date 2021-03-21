@@ -6,6 +6,7 @@ const getGifs = async () => {
     const container = document.getElementById("gif-container");
     const children = result.data.data.forEach(gif => {
       const child = document.createElement("img");
+      child.className="gif-image";
       child.src = gif.images.downsized.url;
       console.log('checking src', child.src);
       container.append(child);
