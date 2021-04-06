@@ -21,16 +21,18 @@
   <div class="page-container">
     <div class="search-container">
       <div class="searchbar-container">
-        <div class="search-icon">
-          <i class="bi bi-search"></i>
-        </div>
-        <input type="text" 
+        <span class="search-icon-container">
+          <div class="search-icon">
+            <i class="bi bi-search" onclick="searchIconClicked()"></i>
+          </div>
+        </span>
+        <input type="search" 
               class="search-bar" 
               placeholder="Search..."
               id="search-bar"
         />
       </div>
-      <button class="search-button" onclick="getGifs()">SEARCH</button>
+        <button id="search-button" onclick="getGifs()">SEARCH</button>
     </div>
     <div id="gif-container">
     </div>

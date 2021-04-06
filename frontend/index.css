@@ -57,9 +57,10 @@ html, body {
  font-size: 20pt;
  color:black;
  cursor:pointer;
+ padding-left: 10px;
 }
 
-.search-button {
+#search-button {
  height: 50px;
  width: 140px;
  background-color: rgb(88, 86, 86);
