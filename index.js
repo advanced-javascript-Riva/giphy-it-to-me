@@ -3,18 +3,36 @@ const getGifs = async () => {
   try{
     const searchBar = document.getElementById('search-bar').value;
     const result = await axios.get(`http://localhost:3000/gifs/${searchBar}`);
-    const container = document.getElementById("gif-container");
-    const children = result.data.data.forEach(gif => {
-      const child = document.createElement("img");
-      child.className="gif-image";
-      child.src = gif.images.downsized.url;
-      container.append(child);
-    });
+    showResults(result);
   } catch (err) {
     console.log(err);
   }
-};
-// Triggering an even on Enter key pressed to show search results
+}
+
+const showResults = result => {
+  const container = document.getElementById('gif-container');
+  // Clears old search results
+  while(container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  const children = result.data.data.forEach(gif => {
+    const child = document.createElement('img');
+    child.className='gif-image';
+    child.src = gif.images.downsized.url;
+    container.append(child);
+  });
+}
+
+const getTrendingGifs = async () => {
+  try {
+    const result = await axios.get(`http://localhost:3000/gifs/trending`);
+    showResults(result);
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+// Triggering an event on Enter key pressed to show search results
 const enterKeyPressed = document.getElementById('search-bar')
 .addEventListener('keyup', e => {
   e.preventDefault();
@@ -23,13 +41,8 @@ const enterKeyPressed = document.getElementById('search-bar')
  }
 });
 
-// Trigger an event when searchIcon clicked and show results
-const searchIconClicked = document.addEventListener('click', e => {
-   if(!e.target.closest('.bi-search')) return;
-   console.log(e.target)
-   getGifs();
- }, false)
+
   
 
-// Clear old Search data after user clicks on X
+
 

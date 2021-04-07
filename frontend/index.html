@@ -16,14 +16,16 @@
 </head>
 <body>
   <header class="header-container">
-    <div>GIPHY IT TO ME</div>
+    <div class="page-header">
+      <div class="title">GIPHY IT TO ME</div>
+    </div>
   </header>
   <div class="page-container">
     <div class="search-container">
       <div class="searchbar-container">
         <span class="search-icon-container">
           <div class="search-icon">
-            <i class="bi bi-search" onclick="searchIconClicked()"></i>
+            <i class="bi bi-search" onclick="getGifs()"></i>
           </div>
         </span>
         <input type="search" 
@@ -34,7 +36,36 @@
       </div>
         <button id="search-button" onclick="getGifs()">SEARCH</button>
     </div>
+    <div class="search-links-container">  
+      <div class="links">
+        <button class="gif-link" onclick="getTrendingGifs()">
+          TRENDING
+        </button>
+        <button class="gif-link">
+          RANDOM
+      </button>
+      </div>
+    </div>
     <div id="gif-container">
+      <!-- default gifs in container will clear before api results are shown -->
+      <div class="default-gifs">
+        <iframe 
+          src="https://giphy.com/embed/vTjXFZ4PZ4DeM" 
+          width="480" 
+          height="314" 
+          frameBorder="0" 
+          class="giphy-embed" 
+          allowFullScreen>
+        </iframe>
+        <iframe 
+          src="https://giphy.com/embed/l0MYC0LajbaPoEADu" 
+          width="480" 
+          height="277" 
+          frameBorder="0" 
+          class="giphy-embed" 
+          allowFullScreen>
+        </iframe>
+      </div>
     </div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

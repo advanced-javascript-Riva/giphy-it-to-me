@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
+const wrapperForAsync = require('../middleware/wrapperAsync');
 router.use(cors());
 const instance = require('../axiosInstance');
 const API_KEY = process.env.API_KEY;
@@ -11,14 +12,15 @@ router.get('/', (req, res, next) => {
 })
 
 // Route requesting data from API
-router.get("/gifs/:string", async (req, res, next) => {
-  try {
+router.get("/gifs/:string", wrapperForAsync(async (req, res, next) => {
     const result = await instance.get(`/search?api_key=${API_KEY}&q=${req.params.string}&limit=28&offset=0&rating=g&lang=en`);
     res.json(result.data);
-  }
-  catch (err) {
-    next(err);
-  }
-});
+  }));
+
+// Route requesting trending and random gifs
+router.get("/gifs/trending",wrapperForAsync(async (req, res, next) => {
+  const result = await instance.get(`/trending?api_key=${API_KEY}&limit=28`);
+  res.json(result.data);
+}));
 
 module.exports = router;
