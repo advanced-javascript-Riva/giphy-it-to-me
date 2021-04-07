@@ -28,20 +28,21 @@
             <i class="bi bi-search" onclick="getGifs()"></i>
           </div>
         </span>
-        <input type="search" 
-              class="search-bar" 
-              placeholder="Search..."
-              id="search-bar"
+        <input 
+          type="search" 
+          class="search-bar" 
+          placeholder="Search..."
+          id="search-bar"
         />
       </div>
         <button id="search-button" onclick="getGifs()">SEARCH</button>
     </div>
-    <div class="search-links-container">  
-      <div class="links">
-        <button class="gif-link" onclick="getTrendingGifs()">
+    <div class="search-button-container">  
+      <div class="buttons">
+        <button class="more-gifs-button" onclick="getTrendingGifs()">
           TRENDING
         </button>
-        <button class="gif-link" onclick="getRandomGifs()">
+        <button class="more-gifs-button" onclick="getRandomGifs()">
           RANDOM
       </button>
       </div>
@@ -54,13 +55,21 @@
           width="480" 
           height="314" 
           frameBorder="0" 
-          class="giphy-embed" 
+          id="gif"
           allowFullScreen>
         </iframe>
         <iframe 
           src="https://giphy.com/embed/l0MYC0LajbaPoEADu" 
           width="480" 
           height="277" 
+          frameBorder="0" 
+          id="gif"
+          allowFullScreen>
+        </iframe>
+        <iframe 
+          src="https://giphy.com/embed/eoVusT7Pi9ODe" 
+          width="480" 
+          height="346" 
           frameBorder="0" 
           class="giphy-embed" 
           allowFullScreen>

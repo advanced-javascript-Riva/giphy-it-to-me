@@ -23,6 +23,21 @@ html, body {
   font-size: 46px;
   padding-top: 20px;
   border-bottom: 2px solid black;
+  background-color:rgb(49, 48, 48);
+}
+
+.title {
+  background-image: 
+  linear-gradient(to right, magenta,orange,yellow,turquoise,indigo,violet); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  animation: move 35s linear infinite;
+  -webkit-text-stroke: 2px black;
+}
+@keyframes move {
+	to {
+		background-position: 4500vh;
+	}
 }
 
 .search-container {
@@ -69,17 +84,25 @@ html, body {
  font-weight:bold;
 }
 
-.search-links-container {
+.search-button-container {
   display:flex;
   flex-direction:row;
 }
 
-.gif-link {
-  color:black;
+.more-gifs-button {
+  color:rgb(12, 12, 12);
   font-size: 14pt;
   font-family: 'Luckiest Guy', cursive;
   justify-content: space-between;
   margin-right: 22px;
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  background-color: rgb(116, 113, 113);
+}
+
+.more-gifs-button:hover {
+  background-color: rgb(69, 145, 212);
 }
 
 .default-gifs {
@@ -88,6 +111,7 @@ html, body {
   height: 260px;
   width:260px;
   justify-content: center;
+  margin-top: 30px;
 }
 
 #gif-container {
@@ -95,6 +119,7 @@ html, body {
   flex-direction:row;
   flex-wrap:wrap;
   justify-content: space-evenly;
+  margin-top: 20px;
 }
 
 .gif-image{

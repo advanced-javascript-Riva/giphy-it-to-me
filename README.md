@@ -12,9 +12,16 @@
 
 **1st Phase: I love GIFs and decided to use the GIPHY Developer SDK, hit an API endpoint, and set up a back-end using Express.**
 
-**Users can:**
+Users can:
   - Search for GIFs by entering a search term
-  - Filter GIFs based off mood
+  - Choose from trending and random gifs
+
+**2nd Phase: Let's take it up a notch or two. This phase incorporates the backend from phase 1 and introduces new features:**
+
+Users can: 
+  - Get a list of tag terms related to the given tag on the GIPHY network
+  - Select stickers 
+  - Click on GIFs and see other GIFs that fall into the same category
 
 
 ### Tools Used Phase 1:
@@ -24,6 +31,13 @@
 - Node.js
 - HTML, CSS, JS
 - Axios for AJAX calls
+- Bootstrap icons
+
+### Tools/Frameworks Used Phase 2:
+
+- React
+- Backend from phase 1
+- Material-UI
 
 ### How to use the app:
 
