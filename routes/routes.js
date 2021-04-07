@@ -17,9 +17,21 @@ router.get("/gifs/:string", wrapperForAsync(async (req, res, next) => {
     res.json(result.data);
   }));
 
-// Route requesting trending and random gifs
+// Route requesting trending gifs
 router.get("/gifs/trending",wrapperForAsync(async (req, res, next) => {
   const result = await instance.get(`/trending?api_key=${API_KEY}&limit=28`);
+  res.json(result.data);
+}));
+
+// Route requesting random gifs
+router.get("/gifs/random",wrapperForAsync(async (req, res, next) => {
+  const result = await instance.get(`/random?api_key=${API_KEY}&limit=28`);
+  res.json(result.data);
+}));
+
+// Route for tag terms
+router.get("/tags/related/:string",wrapperForAsync(async (req, res, next) => {
+  const result = await instance.get(`/tags/related/${req.params.string}?api_key=${API_KEY}&limit=28`);
   res.json(result.data);
 }));
 

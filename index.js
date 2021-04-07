@@ -32,6 +32,15 @@ const getTrendingGifs = async () => {
   }
 }
 
+const getRandomGifs = async () => {
+  try {
+    const result = await axios.get(`http://localhost:3000/gifs/random`);
+    showResults(result);
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 // Triggering an event on Enter key pressed to show search results
 const enterKeyPressed = document.getElementById('search-bar')
 .addEventListener('keyup', e => {
