@@ -1,13 +1,17 @@
 // Get Gifs and display in image tags
-const getGifs = async () => {
-  try{
-    const searchBar = document.getElementById('search-bar').value;
-    const result = await axios.get(`http://localhost:3000/gifs/${searchBar}`);
+const getGifs = async (term) => {
+  try {
+    if (!term) {
+      term = document.getElementById('search-bar').value;
+    }
+    const result = await axios.get(`http://localhost:3000/gifs/${term}`);
     showResults(result);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
+// Initial gifs on load
+getGifs('plants');
 
 const showResults = result => {
   const container = document.getElementById('gif-container');
@@ -38,6 +42,19 @@ const getRandomGifs = async () => {
     showResults(result);
   } catch (err) {
     console.log(err)
+  }
+}
+
+// Todo: created showTags() and show tags to user now
+// Todo: create accordian and table for funzies/practice for interview
+
+const getGifsByTag = async (term) => {
+  try {
+    term = 'pizza';
+    const gifs = await axios.get(`http://localhost:3000/tags/related/${term}`);
+    console.log('gif data with tags', gifs.data);
+  } catch (err) {
+    console.error(err);
   }
 }
 
