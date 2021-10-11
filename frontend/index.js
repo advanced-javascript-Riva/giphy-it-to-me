@@ -32,7 +32,7 @@ const getTrendingGifs = async () => {
     const result = await axios.get(`http://localhost:3000/gifs/trending`);
     showResults(result);
   } catch (err) {
-    console.log(err)
+    console.error(err);
   }
 }
 
@@ -41,22 +41,33 @@ const getRandomGifs = async () => {
     const result = await axios.get(`http://localhost:3000/gifs/random`);
     showResults(result);
   } catch (err) {
-    console.log(err)
+    console.error(err);
   }
 }
 
-// Todo: created showTags() and show tags to user now
-// Todo: create accordian and table for funzies/practice for interview
-
-const getGifsByTag = async (term) => {
+const getGifsByTag = async terms => {
+  terms = ['pizza', 'robots', 'coffee', 'magic', 'gourmet'];
   try {
-    term = 'pizza';
-    const gifs = await axios.get(`http://localhost:3000/tags/related/${term}`);
-    console.log('gif data with tags', gifs.data);
+    const result =  await axios.get(`http://localhost:3000/tags/related/${terms}`);
+    showGifsByTag(result);
   } catch (err) {
     console.error(err);
   }
 }
+
+// Todo: create accordian and table for funzies/practice for interview
+showGifsByTag = result => {
+  const tagContainer = document.getElementById('tag-container');
+
+  const allTagNames = result.data.data.map(tagnames => tagnames.name);
+  allTagNames.forEach(tags => {
+    const children = document.createElement('p');
+    children.className = "tag-names";
+    children.append(tags);
+    tagContainer.append(children);
+  });
+}
+
 
 // Triggering an event on Enter key pressed to show search results
 const enterKeyPressed = document.getElementById('search-bar')
