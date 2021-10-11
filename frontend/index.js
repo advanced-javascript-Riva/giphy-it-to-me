@@ -1,3 +1,4 @@
+
 // Get Gifs and display in image tags
 const getGifs = async (term) => {
   try {
@@ -10,8 +11,6 @@ const getGifs = async (term) => {
     console.error(err);
   }
 }
-// Initial gifs on load
-getGifs('plants');
 
 const showResults = result => {
   const container = document.getElementById('gif-container');
@@ -46,7 +45,7 @@ const getRandomGifs = async () => {
 }
 
 const getGifsByTag = async terms => {
-  terms = ['pizza', 'robots', 'coffee', 'magic', 'gourmet'];
+  terms = ['pizza', 'robots', 'coffee', 'magic', 'gourmet', 'wizards'];
   try {
     const result =  await axios.get(`http://localhost:3000/tags/related/${terms}`);
     showGifsByTag(result);
@@ -55,16 +54,25 @@ const getGifsByTag = async terms => {
   }
 }
 
+// Initial gifs on load
+getGifs('plants');
+
 // Todo: create accordian and table for funzies/practice for interview
 showGifsByTag = result => {
   const tagContainer = document.getElementById('tag-container');
 
+  const tagHeader = document.createElement('h3');
+  tagHeader.className="tag-results";
+  let tagHeaderTitle = 'Tag Results';
+  tagHeader.append(tagHeaderTitle);
+  tagContainer.append(tagHeader);
+
   const allTagNames = result.data.data.map(tagnames => tagnames.name);
-  allTagNames.forEach(tags => {
-    const children = document.createElement('p');
-    children.className = "tag-names";
-    children.append(tags);
-    tagContainer.append(children);
+  const allChildrenOfTagContainer = allTagNames.forEach(tags => {
+    const namesOfTags = document.createElement('p');
+    namesOfTags.className = "tag-names";
+    namesOfTags.append(tags);
+    tagContainer.append(namesOfTags);
   });
 }
 

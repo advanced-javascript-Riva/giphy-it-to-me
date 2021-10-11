@@ -137,3 +137,17 @@ body {
   height: 260px;
   margin: 10px;
 }
+
+.tag-results {
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.tag-names {
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
+}
