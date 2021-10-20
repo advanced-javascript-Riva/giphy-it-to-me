@@ -58,6 +58,7 @@ const getGifsByTag = async terms => {
 getGifs('plants');
 
 // Tag table
+// TODO: Migrate styles over to css file
 showTagTable = result => {
   const allTagNames = result.data.data.map(tagnames => tagnames.name);
 
