@@ -66,12 +66,15 @@ showTagTable = result => {
   const tableOfTags = document.createElement('table');
   tableOfTags.setAttribute('class', 'tags-results-table');
   tableOfTags.style.border = '2px solid blue';
+  tableOfTags.style.margin = 'auto';
 
   const tableTagBody = document.createElement('tbody');
   tableOfTags.appendChild(tableTagBody);
 
   const tagTableHeader = document.createElement('th');
   tagTableHeader.textContent = 'Tag Results';
+  tagTableHeader.setAttribute('class', 'tag-table-header');
+  tagTableHeader.textAlign = 'center';
   tableTagBody.appendChild(tagTableHeader);
 
   allTagNames.forEach(tag => {
@@ -83,6 +86,8 @@ showTagTable = result => {
     tableData.setAttribute('class', 'tag-data');
     tableData.style.border = '3px solid blue';
     tableData.style.color = 'black';
+    tableData.style.textAlign = 'center';
+    tableData.style.padding = '10px';
     tableData.textContent = tag;
 
     tableTagBody.appendChild(tableRows);
@@ -90,9 +95,6 @@ showTagTable = result => {
     document.body.append(tableOfTags);
   });
 }
-
-// Accordian
-
 
 // Triggering an event on Enter key pressed to show search results
 const enterKeyPressed = document.getElementById('search-bar')
